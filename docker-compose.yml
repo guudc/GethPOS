@@ -34,15 +34,19 @@ services:
     image: "ethereum/client-go:latest"
     command:
       - --http
-      - --http.api=eth
+      - --http.api=eth,net,web3,personal,txpool,admin,debug
       - --http.addr=0.0.0.0
+      - --http.corsdomain=*
+      - --http.rpcprefix=/
       - --authrpc.vhosts=*
       - --authrpc.addr=0.0.0.0
       - --authrpc.jwtsecret=/execution/jwtsecret
       - --datadir=/execution
       - --allow-insecure-unlock
-      - --nodiscover
       - --syncmode=full
+      - --networkid=772    
+      - --mine
+      - --miner.etherbase=0xbd877cb457a66eb883f4bfd9ce39d040dd0f6a9b      
     ports:
       - 8551:8551
       - 8545:8545
@@ -69,7 +73,7 @@ services:
       # The chain configuration file used for setting up Prysm
       - --chain-config-file=/consensus/config.yml
       # We specify the chain id used by our execution client
-      - --chain-id=${CHAIN_ID:-32382}
+      - --chain-id=772
       - --rpc-host=0.0.0.0
       - --contract-deployment-block=0
       - --grpc-gateway-host=0.0.0.0
