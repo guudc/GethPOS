@@ -41,8 +41,6 @@ services:
       - --authrpc.jwtsecret=/execution/jwtsecret
       - --datadir=/execution
       - --allow-insecure-unlock
-      - --unlock=0xbd877cb457a66eb883f4bfd9ce39d040dd0f6a9b
-      - --password=/execution/geth_password.txt
       - --nodiscover
       - --syncmode=full
     ports:
