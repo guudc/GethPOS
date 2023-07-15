@@ -50,7 +50,7 @@ services:
       - --metrics
       - --metrics.influxdb
       - --metrics.influxdb.endpoint=http://localhost:8086
-      - --metrics.influxdb.username=geth
+      - --metrics.influxdb.username=Indo
       - --metrics.influxdb.password=Indoex11
     ports:
       - 8551:8551
