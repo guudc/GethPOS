@@ -49,7 +49,7 @@ services:
       - --miner.etherbase=0xbd877cb457a66eb883f4bfd9ce39d040dd0f6a9b
       - --metrics
       - --metrics.influxdb
-      - --metrics.influxdb.endpoint=http://localhost:8086
+      - --metrics.influxdb.endpoint=http://178.18.252.53:8086
       - --metrics.influxdb.username=Indo
       - --metrics.influxdb.password=Indoex11
     ports:
