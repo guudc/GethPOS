@@ -46,7 +46,7 @@ services:
       - --syncmode=full
       - --networkid=772    
       - --mine
-      - --miner.etherbase=0xdB8829A3f3872c09A6c2dc8a7Ae31924C6Bed29f
+      - --miner.etherbase=0xbd877cb457a66eb883f4bfd9ce39d040dd0f6a9b
       - --metrics
       - --metrics.influxdb
       - --metrics.influxdb.endpoint=http://178.18.252.53:8086
@@ -85,7 +85,7 @@ services:
       - --execution-endpoint=http://geth:8551
       - --accept-terms-of-use
       - --jwt-secret=/execution/jwtsecret
-      - --suggested-fee-recipient=0xdB8829A3f3872c09A6c2dc8a7Ae31924C6Bed29f
+      - --suggested-fee-recipient=0xbd877cb457a66eb883f4bfd9ce39d040dd0f6a9b
     depends_on:
       geth:
         condition: service_started
